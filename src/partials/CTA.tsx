@@ -43,21 +43,19 @@ const CTA = () => {
   };
 
   return (
-
-    <div className='w-full h-auto mb-20 pt-20'>
-      <div className='bg-gray-800 w-5/12 rounded-lg mx-auto '>
-
-        <h1 className="text-3xl sm:text-4xl pt-8 text-center uppercase mb-2">
+    <div className='w-full h-auto mb-20 pt-10 sm:pt-20'>
+      <div className='bg-gray-800 w-full sm:w-8/12 lg:w-5/12 rounded-lg mx-auto p-8 sm:p-8'>
+        <h1 className="text-3xl sm:text-4xl pt-8 text-center uppercase mb-4">
           <span className=" bg-gradient-to-r from-pink-500 to-red-600 text-transparent bg-clip-text">
             contact{' '}
           </span>
           <span className="bg-gradient-to-r from-teal-500 to-cyan-600 text-transparent bg-clip-text">
             Me!
-          </span>{' '}
+          </span>
         </h1>
         <div className="flex justify-center mb-12">
           <form
-            className="flex flex-col w-full sm:w-9/12"
+            className="flex flex-col w-full gap-4"
             onSubmit={handleSubmit}
           >
             <label
@@ -67,7 +65,7 @@ const CTA = () => {
               Name
             </label>
             <input
-              className="border border-teal-500 rounded-md py-3 px-4 focus:outline-none focus:ring-2 focus:ring-teal-400 text-gray-700 placeholder-gray-400 mb-4"
+              className="border border-teal-500 rounded-md py-3 px-4 focus:outline-none focus:ring-2 focus:ring-teal-400 text-gray-700 placeholder-gray-400"
               type="text"
               id="name"
               name="name"
@@ -77,13 +75,13 @@ const CTA = () => {
               required
             />
             <label
-              className="font-bold text-lg sm:text-xl  text-gray-400"
+              className="font-bold text-lg sm:text-xl text-gray-400"
               htmlFor="email"
             >
               Email
             </label>
             <input
-              className="border border-purple-500 rounded-md py-3 px-4 focus:outline-none focus:ring-2 focus:ring-purple-400 text-gray-700 placeholder-gray-400 mb-4"
+              className="border border-purple-500 rounded-md py-3 px-4 focus:outline-none focus:ring-2 focus:ring-purple-400 text-gray-700 placeholder-gray-400"
               type="email"
               id="email"
               name="email"
@@ -93,13 +91,13 @@ const CTA = () => {
               required
             />
             <label
-              className="font-bold text-lg sm:text-xl  text-gray-400"
+              className="font-bold text-lg sm:text-xl text-gray-400"
               htmlFor="message"
             >
               Message
             </label>
             <textarea
-              className="border border-pink-500 rounded-md py-3 px-4 focus:outline-none focus:ring-2 focus:ring-pink-400 text-gray-700 placeholder-gray-400 resize-none mb-4"
+              className="border border-pink-500 rounded-md py-3 px-4 focus:outline-none focus:ring-2 focus:ring-pink-400 text-gray-700 placeholder-gray-400 resize-none"
               id="message"
               name="message"
               rows={5}
@@ -108,9 +106,8 @@ const CTA = () => {
               placeholder="Write your message"
               required
             />
-            <div className=" w-full p-2 flex gap-5 mb-10">
-
-              <button type="submit"
+            <div className="w-full flex justify-center">
+            <button type="submit"
                 className="flex-1 px-6 py-3 bg-gradient-to-r from-teal-500 to-cyan-600  text-sm font-medium rounded-lg shadow-lg hover:scale-105 hover:text-black hover:from-cyan-600 hover:to-teal-500 transition-transform duration-200 text-white flex justify-center gap-2 items-center p-3 cursor-pointer"
                 disabled>
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
@@ -121,13 +118,11 @@ const CTA = () => {
                 Send
               </button>
             </div>
-
           </form>
         </div>
         <ToastContainer />
       </div>
     </div>
-
   );
 };
 
