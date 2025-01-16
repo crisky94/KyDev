@@ -1,0 +1,5 @@
+
+
+.linkNavbar:active{
+    color: cyan; /* Color cuando se está clicando el enlace */
+}

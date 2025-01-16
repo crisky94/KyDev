@@ -1,0 +1,28 @@
+---
+
+
+import { CTA } from '@/partials/CTA';
+import { Hero } from '@/partials/Hero';
+import { ProjectList } from '@/partials/ProjectList';
+import {Education} from '@/partials/Education';
+import {Stack } from '@/partials/Stack';
+import Base from '@/templates/Base.astro';
+import { AppConfig } from '@/utils/AppConfig';
+import '../styles/navbar.css'
+
+
+
+
+
+const { title } = AppConfig;
+const { description } = AppConfig;
+---
+
+
+<Base head={{ title, description }}>
+  <Hero />
+  <Stack />
+  <ProjectList />
+  <Education />
+  <CTA />
+</Base>
