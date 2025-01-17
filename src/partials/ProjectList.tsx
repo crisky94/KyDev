@@ -31,7 +31,7 @@ const ProjectList = () => (
         <div className="flex-1 flex flex-col gap-4 ml-4">
           <a
             href="/projects/project-3/"
-            className="text-2xl text-center md:text-left font-semibold transition duration-300 hover:text-pink-400 before:absolute before:bottom-0 before:left-0 before:w-0 before:h-0.5 before:bg-gradient-to-r before:from-pink-500 before:to-red-500 before:transition-all before:duration-300 hover:before:w-full"
+            className="text-2xl text-center md:text-left font-semibold transition duration-300 hover:text-pink-400 "
           >
             FreedayQuiz
           </a>
@@ -65,7 +65,7 @@ const ProjectList = () => (
         <div className="flex-1 flex flex-col gap-4 ml-4">
           <a
             href="/projects/project-2/"
-            className="text-2xl text-center md:text-left font-semibold transition duration-300 hover:text-pink-400 before:absolute before:bottom-0 before:left-0 before:w-0 before:h-0.5 before:bg-gradient-to-r before:from-pink-500 before:to-red-500 before:transition-all before:duration-300 hover:before:w-full"
+            className="text-2xl text-center md:text-left font-semibold transition duration-300 hover:text-pink-400"
           >
             FilmGeek
           </a>
@@ -92,7 +92,7 @@ const ProjectList = () => (
         <div className="flex-1 flex flex-col gap-4 ml-4">
           <a
             href="/projects/project-1/"
-            className="text-2xl text-center md:text-left font-semibold transition duration-300 hover:text-pink-400 before:absolute before:bottom-0 before:left-0 before:w-0 before:h-0.5 before:bg-gradient-to-r before:from-pink-500 before:to-red-500 before:transition-all before:duration-300 hover:before:w-full"
+            className="text-2xl text-center md:text-left font-semibold transition duration-300 hover:text-pink-400"
           >
             Wanderlust
           </a>
@@ -112,7 +112,7 @@ const ProjectList = () => (
       </div>
     </div>
 
-    <div className="text-sm text-center mt-6">
+    <div className="text-lg text-center mt-6">
       <a href="/projects/" className="underline">
         View all Projects →
       </a>
