@@ -10,9 +10,9 @@ const Navbar = () => (
   <Section>
     <NavbarTwoColumns>
       <a className='text-teal-500 text-2xl flex justify-center' href="/"> 
-      <img className='w-10' src="/assets/images/kydev.png"
+      <img className='w-10' src="/assets/images/logo-kydev.png"
         />
-        <p  className='text-teal-600 text-4xl pt-1 font-jersey-15 font-normal'>KyDev</p>
+        <span  className='bg-gradient-to-r from-teal-500 to-cyan-600 text-transparent bg-clip-text text-4xl pt-3 font-jersey-15 font-normal'>yDev</span>
       </a>
 <div className='mr-4'>
       <NavMenu >

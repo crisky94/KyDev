@@ -20,10 +20,10 @@ const ProjectList = () => (
   >
     <div className="flex flex-col items-center justify-center gap-8">
       {/* Proyecto 1: FreedayQuiz */}
-      <div className="bg-gray-800 rounded-lg flex flex-wrap md:flex-nowrap p-4">
+      <div className="bg-gray-800 rounded-lg flex flex-wrap md:flex-nowrap p-2">
         <div className="flex-shrink-0 w-full md:w-auto">
           <img
-            className="w-80 rounded-lg h-48"
+            className="w-full rounded-lg h-52 md:w-80"
             src="/assets/images/freedayQuiz.png"
             alt="Project FreedayQuiz"
           />
@@ -31,7 +31,7 @@ const ProjectList = () => (
         <div className="flex-1 flex flex-col gap-4 ml-4">
           <a
             href="/projects/project-3/"
-            className="text-2xl text-center md:text-left font-semibold transition duration-300 hover:text-pink-400 "
+            className="text-2xl text-center md:text-left font-semibold transition duration-300 hover:text-pink-400  mt-2"
           >
             FreedayQuiz
           </a>
@@ -54,10 +54,10 @@ const ProjectList = () => (
       </div>
 
       {/* Proyecto 2: FilmGeek */}
-      <div className="bg-gray-800 rounded-lg flex flex-wrap md:flex-nowrap p-4">
+      <div className="bg-gray-800 rounded-lg flex flex-wrap p-2">
         <div className="flex-shrink-0 w-full md:w-auto">
           <img
-            className="w-80 rounded-lg h-48"
+            className="w-full rounded-lg h-48 md:w-80"
             src="/assets/images/film-geek-image.png"
             alt="Project FilmGeek"
           />
@@ -65,7 +65,7 @@ const ProjectList = () => (
         <div className="flex-1 flex flex-col gap-4 ml-4">
           <a
             href="/projects/project-2/"
-            className="text-2xl text-center md:text-left font-semibold transition duration-300 hover:text-pink-400"
+            className="text-2xl text-center md:text-left font-semibold transition duration-300 hover:text-pink-400  mt-2"
           >
             FilmGeek
           </a>
@@ -81,10 +81,10 @@ const ProjectList = () => (
       </div>
 
       {/* Proyecto 3: Wanderlust */}
-      <div className="bg-gray-800 rounded-lg flex flex-wrap md:flex-nowrap p-4">
+      <div className="bg-gray-800 rounded-lg flex flex-wrap md:flex-nowrap p-2">
         <div className="flex-shrink-0 w-full md:w-auto">
           <img
-            className="w-80 rounded-lg h-48"
+            className="rounded-lg h-48 w-full md:w-80"
             src="/assets/images/wanderlust.png"
             alt="Project Wanderlust"
           />
@@ -92,7 +92,7 @@ const ProjectList = () => (
         <div className="flex-1 flex flex-col gap-4 ml-4">
           <a
             href="/projects/project-1/"
-            className="text-2xl text-center md:text-left font-semibold transition duration-300 hover:text-pink-400"
+            className="text-2xl text-center md:text-left font-semibold transition duration-300 hover:text-pink-400 mt-2"
           >
             Wanderlust
           </a>

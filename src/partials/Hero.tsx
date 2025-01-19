@@ -15,7 +15,7 @@ const Hero = () => (
   <span className="bg-gradient-to-r from-teal-500 to-cyan-600 text-transparent bg-clip-text">Cris Labrador {' '}</span>
   👋
   </p>
-  <p>but my friends call me  <span className="text-teal-600 text-6xl pt-1 font-jersey-15 font-normal">Ky {' '}</span></p>
+  <p>but my friends call me  <span className="bg-gradient-to-r from-teal-500 to-cyan-600 text-transparent bg-clip-text text-6xl pt-1 font-jersey-15 font-normal">Ky {' '}</span></p>
 </div>
       }
       description={
