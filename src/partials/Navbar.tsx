@@ -20,13 +20,14 @@ const Navbar = () => (
       href="/"
       className="text-teal-500 text-lg {currentPath === '/' ? 'active' : ''} linkNavbar"
       >
-      Home
+        <span className='bg-gradient-to-r from-teal-500 to-cyan-600 text-transparent bg-clip-text'>Home</span>
     </a>
     <a
       href="/projects/"
       className="text-teal-500  text-lg {currentPath === '/projects/' ? 'active' : ''} linkNavbar"
       >
-      Projects
+        <span className='bg-gradient-to-r from-teal-500 to-cyan-600 text-transparent bg-clip-text ml-4'>Projects</span>
+      
     </a>
       </NavMenu>
 </div>
