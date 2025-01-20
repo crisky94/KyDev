@@ -8,15 +8,15 @@ const Hero = () => (
   <Section >
     <HeroAvatar
       title={
-<div className='`text-3xl sm:text-4xl'>
-  Hi there,
-  <p className='pt-2'>
-    I'm{' '}
-  <span className="bg-gradient-to-r from-teal-500 to-cyan-600 text-transparent bg-clip-text">Cris Labrador {' '}</span>
-  👋
-  </p>
-  <p>but my friends call me  <span className="bg-gradient-to-r from-teal-500 to-cyan-600 text-transparent bg-clip-text text-6xl pt-1 font-jersey-15 font-normal">Ky {' '}</span></p>
-</div>
+        <div className='`text-3xl sm:text-4xl'>
+          Hi there,
+          <p className='pt-2'>
+            I'm{' '}
+            <span className="bg-gradient-to-r from-teal-500 to-cyan-600 text-transparent bg-clip-text">Cris Labrador {' '}</span>
+            👋
+          </p>
+          <p>but my friends call me  <span className="bg-gradient-to-r from-teal-500 to-cyan-600 text-transparent bg-clip-text text-6xl pt-1 font-jersey-15 font-normal">Ky {' '}</span></p>
+        </div>
       }
       description={
         <>
@@ -28,14 +28,14 @@ const Hero = () => (
         </>
       }
       avatar={
-      <div className='bg-gradient-to-b from-teal-500 to-cyan-600 rounded-full'>
-        <img
-          className="h-70 w-64 rounded-full border-4 border-transparent"
-          src="/assets/images/me-1.jpg"
-          alt="Avatar image"
-          loading="lazy"
+        <div className='bg-gradient-to-b from-teal-500 to-cyan-600 rounded-full'>
+          <img
+            className="h-70 w-64 rounded-full border-4 border-transparent"
+            src="/assets/images/me-1.jpg"
+            alt="Avatar image"
+            loading="lazy"
           />
-          </div>
+        </div>
       }
       socialButtons={
         <div className='flex gap-6 mb-8'>
@@ -46,12 +46,12 @@ const Hero = () => (
             />
           </a>
           <a href="https://github.com/crisky94" target='blank'>
-          <HeroSocial
+            <HeroSocial
               src="/assets/images/github.png"
               alt="Linkedin icon"
             /></a>
           <a href="https://gitlab.com/criistiiniilla.1994" target='blank'>
-          <HeroSocial
+            <HeroSocial
               src="/assets/images/gitlab-1.png"
               alt="Linkedin icon"
             />
@@ -61,8 +61,8 @@ const Hero = () => (
     />
     <div className="flex flex-col items-center mt-4">
       <div className='flex items-center'>
-      <p className="text-lg font-medium text-gray-500">Know me better</p>
-      <p className='text-4xl'>👇</p>
+        <p className="text-lg font-medium text-gray-500">Know me better</p>
+        <p className='text-4xl'>👇</p>
       </div>
       <a
         href="/assets/files/cv_KyDev_2025.pdf"
