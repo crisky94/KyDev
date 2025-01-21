@@ -65,7 +65,7 @@ const Hero = () => (
         <p className='text-4xl'>👇</p>
       </div>
       <a
-        href="/assets/files/cv_KyDev_2025.pdf"
+        href="/assets/files/cv_2025.pdf"
         download="KyDev_CV"
         className="mt-2 inline-flex items-center px-8 py-3 bg-gradient-to-r from-teal-500 to-cyan-600  text-sm font-medium rounded-lg shadow-lg hover:scale-105 hover:from-cyan-600 hover:to-teal-500 transition-transform duration-200"
       >
