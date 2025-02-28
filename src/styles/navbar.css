@@ -1,5 +1,6 @@
 
 
-.linkNavbar:active{
-    color: cyan; /* Color cuando se está clicando el enlace */
+.linkNavbar:hover{
+    border-radius: 8px;
 }
+

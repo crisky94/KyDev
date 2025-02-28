@@ -8,10 +8,7 @@ import '../styles/navbar.css';
 const ProjectList = () => (
   <Section
     title={
-      <h1 className="text-2xl sm:text-3xl pt-18 text-center mb-4 uppercase">
-        <span className="bg-gradient-to-r from-pink-500 to-red-600 text-transparent bg-clip-text">
-          TOP{' '}
-        </span>
+      <h1 className="text-2xl sm:text-3xl pt-14 text-center p-12 uppercase">
         <span className="bg-gradient-to-r from-teal-500 to-cyan-600 text-transparent bg-clip-text">
           Projects 🏆
         </span>
@@ -31,7 +28,7 @@ const ProjectList = () => (
         <div className="flex-1 flex flex-col gap-4 ml-4">
           <a
             href="/projects/project-3/"
-            className="text-2xl text-center md:text-left font-semibold transition duration-300 hover:text-pink-400  mt-2"
+            className="text-2xl text-center md:text-left font-semibold transition duration-300 hover:underline  mt-2"
           >
             FreedayQuiz
           </a>
@@ -65,7 +62,7 @@ const ProjectList = () => (
         <div className="flex-1 flex flex-col gap-4 ml-4">
           <a
             href="/projects/project-2/"
-            className="text-2xl text-center md:text-left font-semibold transition duration-300 hover:text-pink-400  mt-2"
+            className="text-2xl text-center md:text-left font-semibold transition duration-300 hover:underline  mt-2"
           >
             FilmGeek
           </a>
@@ -92,7 +89,7 @@ const ProjectList = () => (
         <div className="flex-1 flex flex-col gap-4 ml-4">
           <a
             href="/projects/project-1/"
-            className="text-2xl text-center md:text-left font-semibold transition duration-300 hover:text-pink-400 mt-2"
+            className="text-2xl text-center md:text-left font-semibold transition duration-300 hover:underline mt-2"
           >
             Wanderlust
           </a>
@@ -113,7 +110,7 @@ const ProjectList = () => (
     </div>
 
     <div className="text-lg text-center mt-6">
-      <a href="/projects/" className="underline">
+      <a href="/projects/">
         View all Projects →
       </a>
     </div>

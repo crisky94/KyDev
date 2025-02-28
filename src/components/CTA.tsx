@@ -68,7 +68,7 @@ const CTA = () => {
   };
 
   return (
-    <div className="flex justify-center items-center w-full h-auto mb-8 sm:pt-10">
+    <div id='contact' className="flex justify-center items-center w-full h-auto mb-8 sm:pt-10">
       <div className="bg-gray-800 w-72 rounded-lg mx-auto p-3 sm:p-4">
         <h1 className="text-lg sm:text-xl text-center uppercase mb-4">
           <span className="bg-gradient-to-r from-pink-500 to-red-600 text-transparent bg-clip-text">
