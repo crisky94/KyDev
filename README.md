@@ -1,5 +1,3 @@
-[![Demo](https://img.shields.io/badge/Demo-Live-green?logo=vercel)](https://kydev.vercel.app/)
-
 This is my portfolio.I hope that you like it!
 
 ### Contact
