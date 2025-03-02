@@ -8,7 +8,6 @@ import {Education} from '@/partials/Education';
 import {Stack } from '@/partials/Stack';
 import Base from '@/templates/Base.astro';
 import { AppConfig } from '@/utils/AppConfig';
-import '../styles/navbar.css'
 import {CTA} from "../components/CTA.tsx"
 
 
@@ -24,7 +23,7 @@ const { description } = AppConfig;
   <Stack />
   <ProjectList />
   <Education />
-  <CTA/>
+  <CTA client:load/>
 </Base>
 
 

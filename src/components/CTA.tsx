@@ -40,6 +40,7 @@ const CTA = () => {
       );
       console.log('Message sent:', result.text);
 
+      // Mostrar notificación de éxito
       toast.success('Message sent successfully!', {
         position: "bottom-center",
         autoClose: 3000,
@@ -49,11 +50,13 @@ const CTA = () => {
         pauseOnHover: true,
       });
 
+      // Limpiar el formulario
       setFormData({ name: '', email: '', message: '' });
     } catch (err) {
       console.error('Error sending message:', err);
       setError('Failed to send message. Please try again.');
 
+      // Mostrar notificación de error
       toast.error('Failed to send message. Please try again.', {
         position: "bottom-center",
         autoClose: 3000,
@@ -68,94 +71,78 @@ const CTA = () => {
   };
 
   return (
-    <div id='contact' className="flex justify-center items-center w-full h-auto mb-8 sm:pt-10">
-      <div className="bg-gray-800 w-72 rounded-lg mx-auto p-3 sm:p-4">
-        <h1 className="text-lg sm:text-xl text-center uppercase mb-4">
-          <span className="bg-gradient-to-r from-pink-500 to-red-600 text-transparent bg-clip-text">
-            Contact{' '}
+    <div id='contact' className="flex flex-col items-center w-full h-auto mb-8 sm:pt-10 p-6 md:p-12 gap-6 mt-20">
+      {/* Texto introductorio */}
+      <div className="text-center">
+        <h2 className="text-3xl sm:text-4xl font-extrabold bg-gradient-to-r from-cyan-500 to-blue-500 text-transparent bg-clip-text">
+          Let's Build Something Amazing! 🚀
+        </h2>
+        <p className="text-lg text-gray-300 mt-3">
+          Looking for creative solutions? Let's connect and turn ideas into reality!
+        </p>
+      </div>
+
+      {/* Formulario */}
+      <div className="bg-gray-900 bg-opacity-80 backdrop-blur-lg border border-gray-700 shadow-2xl w-full max-w-lg rounded-xl mx-auto p-6 sm:p-8">
+        <h1 className="text-2xl sm:text-3xl text-center font-bold uppercase tracking-wide mb-6">
+          <span className="bg-gradient-to-r from-purple-500 to-pink-500 text-transparent bg-clip-text">
+            Get In
           </span>
-          <span className="bg-gradient-to-r from-teal-500 to-cyan-600 text-transparent bg-clip-text">
-            Me!
+          <span className="bg-gradient-to-r from-teal-400 to-cyan-500 text-transparent bg-clip-text">
+            Touch
           </span>
         </h1>
-        <form className="flex flex-col w-full gap-2" onSubmit={handleSubmit}>
-          <label className="font-bold text-sm text-gray-400" htmlFor="name">
-            Name
-          </label>
+
+        <form className="flex flex-col gap-4" onSubmit={handleSubmit}>
           <input
-            className="border border-teal-500 rounded-md py-1 px-2 focus:outline-none focus:ring-1 focus:ring-teal-400 text-gray-700 placeholder-gray-400"
+            className="border border-cyan-400 rounded-lg py-2 px-4 bg-gray-800 text-white focus:ring-2 focus:ring-cyan-400 placeholder-gray-400 transition duration-300"
             type="text"
-            id="name"
             name="name"
             value={formData.name}
             onChange={handleChange}
-            placeholder="Enter your name"
+            placeholder="Your Name"
             required
           />
-          <label className="font-bold text-sm text-gray-400" htmlFor="email">
-            Email
-          </label>
           <input
-            className="border border-purple-500 rounded-md py-1 px-2 focus:outline-none focus:ring-1 focus:ring-purple-400 text-gray-700 placeholder-gray-400"
+            className="border border-purple-400 rounded-lg py-2 px-4 bg-gray-800 text-white focus:ring-2 focus:ring-purple-400 placeholder-gray-400 transition duration-300"
             type="email"
-            id="email"
             name="email"
             value={formData.email}
             onChange={handleChange}
-            placeholder="Enter your email"
+            placeholder="Your Email"
             required
           />
-          <label className="font-bold text-sm text-gray-400" htmlFor="message">
-            Message
-          </label>
           <textarea
-            className="border border-pink-500 rounded-md py-1 px-2 focus:outline-none focus:ring-1 focus:ring-pink-400 text-gray-700 placeholder-gray-400 resize-none"
-            id="message"
+            className="border border-pink-400 rounded-lg py-2 px-4 bg-gray-800 text-white focus:ring-2 focus:ring-pink-400 placeholder-gray-400 transition duration-300 resize-none"
             name="message"
-            rows={3}
+            rows={4}
             value={formData.message}
             onChange={handleChange}
-            placeholder="Write your message"
+            placeholder="Your Message"
             required
           />
           {error && <div className="text-red-500 text-center mt-2 text-xs">{error}</div>}
-          <div className="w-full flex justify-center mt-4">
-            <button
-              type="submit"
-              className="px-4 py-2 bg-gradient-to-r from-teal-500 to-cyan-600 text-xs font-medium rounded-lg shadow-lg hover:scale-105 hover:text-black hover:from-cyan-600 hover:to-teal-500 transition-transform duration-200 text-white flex justify-center gap-2 items-center"
-              disabled={isSubmitting}
-            >
-              {isSubmitting ? (
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-5 h-5 animate-spin">
+
+          <button
+            type="submit"
+            className="w-full py-3 bg-gradient-to-r from-teal-500 to-cyan-600 text-sm font-medium rounded-lg shadow-lg hover:scale-105 hover:from-cyan-600 hover:to-teal-500 transition-transform duration-200 text-white  flex justify-center items-center gap-2"
+            disabled={isSubmitting}
+          >
+            {isSubmitting ? (
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-5 h-5 animate-spin">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5" />
+              </svg>
+            ) : (
+              <>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-5 h-5">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5" />
                 </svg>
-              ) : (
-                <>
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-5 h-5">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5" />
-                  </svg>
-                  Send
-                </>
-              )}
-            </button>
-          </div>
+                Send Message
+              </>
+            )}
+          </button>
         </form>
       </div>
-
-      {/* Lado derecho con texto gracioso */}
-      <div className="mr-12 text-center">
-      <p className="text-md">If you're looking for creative and effective solutions for your business.</p>  
-<p className="text-md mt-4">Together, we can achieve great things.</p>  
-<p className="mt-4">Shall we talk?</p>  
-
-  <img 
-    src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExcWU2YWNtbnpza2wyYXFtb2Q2OHVya2R2b20yMWVsZmgwZm1xMWc4MyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/iz30qSwSKKCnC/giphy.gif" 
-    alt="Funny Animation"
-    className="mt-4 w-40 h-40 object-cover rounded-full mx-auto"
-  />
-</div>
-
-
       <ToastContainer />
     </div>
   );
