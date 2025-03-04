@@ -8,20 +8,14 @@
     "forceConsistentCasingInFileNames": true,
     "outDir": "./dist",
     // Enable top-level await, and other modern ESM features.
-
-
     // Enable node-style module resolution, for things like npm package imports.
- 
     // Enable JSON imports.
-  
-
     "removeComments": true,
     "preserveConstEnums": true,
     "strict": true,
     "alwaysStrict": true,
     "strictNullChecks": true,
     "noUncheckedIndexedAccess": true,
-
     "noImplicitAny": true,
     "noImplicitReturns": true,
     "noImplicitThis": true,
@@ -29,24 +23,27 @@
     "noUnusedParameters": true,
     "allowUnreachableCode": false,
     "noFallthroughCasesInSwitch": true,
-
     "declaration": true,
-
-
     "allowSyntheticDefaultImports": true,
     "allowJs": false,
-
-
     "jsx": "react-jsx",
     // Enable stricter transpilation for better output.
     "isolatedModules": true,
     // Add type definitions for our Vite runtime.
-    "types": ["vite/client"],
-
+    "types": [
+      "vite/client"
+    ],
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": [
+        "./src/*"
+      ]
     }
   },
-  "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.astro"]
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "src/**/*.astro"
+  ],
+  "extends": "astro/tsconfigs/base"
 }

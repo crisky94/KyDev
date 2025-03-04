@@ -6,7 +6,7 @@ pubDate: 2024-11-24T00:00:00Z
 imgSrc: '/assets/images/freedayQuiz.png'
 imgAlt: 'Image FredayQuiz'
 ---
-[![Repo](https://img.shields.io/badge/Repo-Link-blue?logo=github)](https://github.com/crisky94/Freeday-quiz)[![Demo](https://img.shields.io/badge/Demo-Live-green?logo=vercel)](https://freeday-quiz.onrender.com)
+
 
 ---
 

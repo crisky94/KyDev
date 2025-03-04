@@ -9,7 +9,6 @@ imgAlt: 'Image FilmGeek'
 
 # 🎥 Welcome to **FILM GEEK**!  
 
-[![Repo](https://img.shields.io/badge/Repo-Link-blue?logo=gitlab)](https://gitlab.com/criistiiniilla.1994/film-geek)[![Demo](https://img.shields.io/badge/Demo-Live-green?logo=vercel)](https://film-geek.vercel.app)  
 
 ---
 

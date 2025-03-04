@@ -1,0 +1,50 @@
+
+
+---
+import type { FrontmatterPage, IFrontmatter } from 'astro-boilerplate-components';
+import { Section, PaginationHeader } from 'astro-boilerplate-components';
+import { AppConfig } from '@/utils/AppConfig';
+import { sortByDate } from '@/utils/Projects';  // Asegúrate de que esta función esté correctamente definida
+
+// Define las rutas estáticas para la página de proyectos
+export async function getStaticPaths({ paginate }) {
+  const allProjects = await Astro.glob('../projects/*.md');  // Asegúrate de que la ruta sea correcta
+
+  if (allProjects.length === 0) {
+    console.warn("⚠️ No se encontraron archivos .md en content/projects/");
+  }
+
+  const sortedProjects = sortByDate(allProjects);
+
+  // Retorna las rutas paginadas para la página de proyectos
+  return paginate(sortedProjects, { pageSize: 6 });
+}
+
+interface Props {
+  page: FrontmatterPage;
+}
+
+const { page } = Astro.props as Props;
+const titleSuffix = ` ${AppConfig.site_name}`;
+const titleBase = `Projects -`;
+const title = titleBase + titleSuffix;
+const description = 'Pagination example built with Astro styled with Tailwind CSS.';
+---
+
+<Base head={{ title, description }}>
+  <Section>
+    <PaginationHeader
+      title='PROJECTS'
+      description='Hi, glad you are visiting my projects!!!🚀'
+    />
+  </Section>
+
+  <Section>
+    <BlogGallery postList={page.data} />
+  </Section>
+
+  <Section>
+    <NewerOlderPagination page={page} />
+  </Section>
+
+</Base>

@@ -1,10 +1,10 @@
 import { ColorTags, Tags } from 'astro-boilerplate-components';
 
 const Stack = () => (
-    <div className="w-full py-10">
-        <h2 className="text-center text-3xl sm:text-4xl font-bold text-white mb-10 sm:mb-20">
-            <span className='text-3xl font-extrabold bg-gradient-to-r from-cyan-500 to-blue-500 text-transparent bg-clip-text'>
-                My Tech Stack 🚀
+    <div id='stack' className="w-full py-10">
+        <h2 className="text-center text-3xl sm:text-4xl font-bold text-white mb-10 pt-10">
+            <span className='text-3xl font-extrabold '>
+                My Stack 💻 
             </span>
         </h2>
         <div className="max-w-4xl mx-auto grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 gap-4 px-6 sm:px-12 w-80 md:w-full">

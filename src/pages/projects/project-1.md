@@ -8,7 +8,7 @@ imgAlt: 'Image Wanderlust'
 ---
 
 # Wanderlust 🌍 
-[![Repo](https://img.shields.io/badge/Repo-Link-blue?logo=github)](https://github.com/crisky94/ProyectoBlogViajes)
+
 
 ---  
 ### Este proyecto arrancó el 10 de diciembre de 2023  

@@ -75,7 +75,7 @@ const CTA = () => {
       {/* Texto introductorio */}
       <div className="text-center">
         <h2 className="text-3xl sm:text-4xl font-extrabold bg-gradient-to-r from-cyan-500 to-blue-500 text-transparent bg-clip-text">
-          Let's Build Something Amazing! 🚀
+          Let's Build Something Amazing! 
         </h2>
         <p className="text-lg text-gray-300 mt-3">
           Looking for creative solutions? Let's connect and turn ideas into reality!
@@ -125,7 +125,7 @@ const CTA = () => {
 
           <button
             type="submit"
-            className="w-full py-3 bg-gradient-to-r from-teal-500 to-cyan-600 text-sm font-medium rounded-lg shadow-lg hover:scale-105 hover:from-cyan-600 hover:to-teal-500 transition-transform duration-200 text-white  flex justify-center items-center gap-2"
+            className="w-full py-3 bg-gradient-to-r from-teal-500 border border-white to-cyan-600 text-sm font-medium rounded-lg shadow-lg hover:scale-105 hover:from-cyan-600 hover:to-teal-500 transition-transform duration-200 text-white  flex justify-center items-center gap-2"
             disabled={isSubmitting}
           >
             {isSubmitting ? (

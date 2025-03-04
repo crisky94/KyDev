@@ -1,29 +1,87 @@
+
 ---
-
-
+export const prerender = true;
 
 import { Hero } from '@/partials/Hero';
 import { ProjectList } from '@/partials/ProjectList';
 import {Education} from '@/partials/Education';
 import {Stack } from '@/partials/Stack';
 import Base from '@/templates/Base.astro';
-import { AppConfig } from '@/utils/AppConfig';
-import {CTA} from "../components/CTA.tsx"
-
-
-
-
+import { AppConfig } from '@/utils/AppConfig'
+import { CTA } from "../components/CTA.tsx";
 const { title } = AppConfig;
 const { description } = AppConfig;
 ---
-
-
 <Base head={{ title, description }}>
-  <Hero />
-  <Stack />
-  <ProjectList />
-  <Education />
-  <CTA client:load/>
-</Base>
+  <div id="splash-screen" class="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-black transition-opacity duration-1000">
+    <img src="/assets/images/logo-kydev.png" alt="Logo" class="w-32 h-32 animate-fade-in-out" />
+  </div>
 
+  <div id="main-content" class="opacity-0 transition-opacity duration-1000">
+    <div class="fade-in-section">
+      <Hero />
+    </div>
+    <div class="fade-in-section">
+      <Stack />
+    </div>
+    <div class="fade-in-section">
+      <ProjectList />
+    </div>
+    <div class="fade-in-section">
+      <Education />
+    </div>
+    <div class="fade-in-section">
+      <CTA client:load />
+    </div>
+  </div>
+
+  <script>
+    setTimeout(() => {
+      document.getElementById("splash-screen").classList.add("opacity-0");
+      setTimeout(() => {
+        document.getElementById("splash-screen").style.display = "none";
+        document.getElementById("main-content").classList.remove("opacity-0");
+      }, 1000); // Tiempo para el fade-out
+    }, 3000);
+
+    // Intersection Observer para detectar el scroll
+    const fadeInSections = document.querySelectorAll('.fade-in-section');
+    
+    const observerOptions = {
+      threshold: 0.5 // El 50% del componente debe ser visible para disparar el evento
+    };
+    
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('fade-in');
+          observer.unobserve(entry.target); // Deja de observar cuando se haya activado la animación
+        }
+      });
+    }, observerOptions);
+
+    fadeInSections.forEach(section => {
+      observer.observe(section);
+    });
+  </script>
+
+  <style>
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(50px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    .fade-in-section {
+      opacity: 0;
+      transform: translateY(50px);
+      transition: opacity 1s ease, transform 1s ease;
+    }
+
+    .fade-in {
+      opacity: 1;
+      transform: translateY(0);
+      animation: fadeIn 1s ease-out forwards;
+    }
+  </style>
+</Base>
 

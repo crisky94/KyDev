@@ -6,11 +6,14 @@ const Hero = () => (
   <Section>
         <div className='flex justify-center text-4xl sm:text-5xl md:text-6xl text-center mt-20'>
           <p className="bg-gradient-to-r from-teal-500 to-cyan-600 text-transparent bg-clip-text text-center">Cris Labrador</p>
-        </div>    
+        </div>  
+        <div className='flex justify-center text-2xl sm:text-5xl md:text-6xl text-center mt-4'>
+          <p className=" text-center">My friends call me <span className='bg-gradient-to-r from-teal-500 to-cyan-600 text-transparent bg-clip-text text-center font-jersey-15'> Ky</span></p>
+        </div>   
         <div className='text-center mt-6 sm:mt-8'>
-          Passionate <span className="text-teal-500 underline">
+          Passionate <span className="text-teal-500 ">
             FullStack
-          </span>{' '} and lover of <span className="text-teal-500 underline">
+          </span>{' '} and lover of <span className="text-teal-500 ">
             logic and problem-solving
           </span>. Programming turned my curiosity into a career, blending creativity with technical expertise. Explore my journey as I turn ideas into reality!
           <div className="flex justify-center mt-4 gap-4 sm:gap-6">
@@ -24,7 +27,7 @@ const Hero = () => (
                     alt="LinkedIn"
                     width={24}
                     height={24}
-                    className="hover:opacity-80 transition-all duration-300"
+                    className="hover:scale-110 transition-all duration-300"
                 />
             </a>
 
@@ -38,7 +41,7 @@ const Hero = () => (
                     alt="GitHub"
                     width={24}
                     height={24}
-                    className="hover:opacity-80 transition-all duration-300"
+                    className="hover:scale-110 transition-all duration-300"
                 />
             </a>
 
@@ -52,7 +55,7 @@ const Hero = () => (
                     alt="GitLab"
                     width={24}
                     height={24}
-                    className="hover:opacity-80 transition-all duration-300"
+                    className="hover:scale-110 transition-all duration-300"
                 />
             </a>
         </div>
@@ -62,7 +65,7 @@ const Hero = () => (
       <a
         href="/assets/files/cv_2025.pdf"
         download="KyDev_CV"
-        className="mt-4 inline-flex items-center px-8 py-3 bg-gradient-to-r from-teal-500 to-cyan-600 text-sm font-medium rounded-lg shadow-lg hover:scale-105 hover:from-cyan-600 hover:to-teal-500 transition-transform duration-200"
+        className="border mt-4 inline-flex items-center px-8 py-3 bg-gradient-to-r from-teal-500 to-cyan-600 text-sm font-medium rounded-lg shadow-lg hover:scale-105 hover:from-cyan-600 hover:to-teal-500 transition-transform duration-200"
       >
         <img
           src="/assets/images/download-1.png"
