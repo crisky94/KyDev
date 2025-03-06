@@ -1,19 +1,17 @@
 import {
-    Section,
     ColorTags,
     Tags
 } from 'astro-boilerplate-components';
 
 const Education = () => (
-    <Section
-        title={
-            <h1 id='education'  className="text-3xl sm:text-4xl pt-14 text-center p-8 font-extrabold tracking-wide">
-                <span className="text-3xl font-extrabold ">
-                    Education 🎓
-                </span>
-            </h1>
-        }
+    <section className='pt-32 pb-32'
+
     >
+        <h1 id='education' className="text-3xl sm:text-4xl pt-14 text-center p-8 font-extrabold tracking-wide">
+            <span className="text-3xl font-extrabold font-serif">
+                Education 🎓
+            </span>
+        </h1>
         <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 gap-8 px-4 sm:px-6">
             {[
                 {
@@ -43,7 +41,7 @@ const Education = () => (
                 <a
                     key={index}
                     href={cert.link} target='_blank'
-                    className="bg-gray-900 bg-opacity-70 border border-white backdrop-blur-md rounded-xl p-6 shadow-xl hover:scale-105 transition-transform duration-300 block"
+                    className="bg-gray-900 bg-opacity-70 border border-white rounded-xl p-6 shadow-xl hover:scale-105 transition-transform duration-300 block"
                 >
                     <div>
                         <h2 className="text-2xl sm:text-xl font-semibold text-center mb-3">
@@ -56,14 +54,14 @@ const Education = () => (
                                 </Tags>
                             ))}
                         </div>
-                        <p className="text-gray-300 mt-4 text-sm sm:text-base text-center">
+                        <p className="text-gray-300 mt-4 text-center">
                             {cert.description}
                         </p>
                     </div>
                 </a>
             ))}
         </div>
-    </Section>
+    </section>
 );
 
 export { Education };

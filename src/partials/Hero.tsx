@@ -1,14 +1,12 @@
-import {
-  Section,
-} from 'astro-boilerplate-components';
+
 
 const Hero = () => (
-  <Section>
-        <div className='flex justify-center text-4xl sm:text-5xl md:text-6xl text-center mt-20'>
-          <p className="bg-gradient-to-r from-teal-500 to-cyan-600 text-transparent bg-clip-text text-center">Cris Labrador</p>
+  <section className='mx-0 max-screen-xl pt-32'>
+        <div className='flex justify-center text-6xl sm:text-5xl md:text-6xl text-center mt-20'>
+          <p className="bg-gradient-to-r from-teal-500 to-cyan-600 text-transparent bg-clip-text text-center font-serif">Cris Labrador</p>
         </div>  
-        <div className='flex justify-center text-2xl sm:text-5xl md:text-6xl text-center mt-4'>
-          <p className=" text-center">My friends call me <span className='bg-gradient-to-r from-teal-500 to-cyan-600 text-transparent bg-clip-text text-center font-jersey-15'> Ky</span></p>
+        <div className='flex justify-center text-6xl sm:text-5xl md:text-6xl text-center mt-4'>
+          <p className=" text-center">My friends call me <span className='bg-gradient-to-r from-teal-500 to-cyan-600 text-transparent bg-clip-text text-center'> Ky</span></p>
         </div>   
         <div className='text-center mt-6 sm:mt-8'>
           Passionate <span className="text-teal-500 ">
@@ -75,7 +73,7 @@ const Hero = () => (
         Download CV
       </a>
     </div>
-  </Section>
+  </section>
 );
 
 export { Hero };

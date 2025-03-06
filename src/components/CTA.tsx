@@ -71,7 +71,7 @@ const CTA = () => {
   };
 
   return (
-    <div id='contact' className="flex flex-col items-center w-full h-auto mb-8 sm:pt-10 p-6 md:p-12 gap-6 mt-20">
+    <div id='contact' className="flex flex-col items-center w-full h-auto mb-8 sm:pt-10 p-6 md:p-12 gap-6 pt-20">
       {/* Texto introductorio */}
       <div className="text-center">
         <h2 className="text-3xl sm:text-4xl font-extrabold bg-gradient-to-r from-cyan-500 to-blue-500 text-transparent bg-clip-text">
@@ -125,7 +125,7 @@ const CTA = () => {
 
           <button
             type="submit"
-            className="w-full py-3 bg-gradient-to-r from-teal-500 border border-white to-cyan-600 text-sm font-medium rounded-lg shadow-lg hover:scale-105 hover:from-cyan-600 hover:to-teal-500 transition-transform duration-200 text-white  flex justify-center items-center gap-2"
+            className="w-full py-3 bg-gradient-to-r from-teal-500 border border-white to-cyan-600 font-medium rounded-lg shadow-lg hover:scale-105 hover:from-cyan-600 hover:to-teal-500 transition-transform duration-200 text-white  flex justify-center items-center gap-2"
             disabled={isSubmitting}
           >
             {isSubmitting ? (

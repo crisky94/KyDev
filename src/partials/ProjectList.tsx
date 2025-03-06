@@ -108,7 +108,7 @@
 // export { ProjectList };
 
 
-import { ColorTags, Section, Tags } from 'astro-boilerplate-components';
+import { ColorTags, Tags } from 'astro-boilerplate-components';
 
 const projects = [
   {
@@ -144,6 +144,7 @@ const projects = [
     description:
       'A social network for travel enthusiasts to share trips, hidden gems, and authentic experiences worldwide.',
     repoUrl: 'https://github.com/crisky94/ProyectoBlogViajes',
+    demoUrl: '',
     tags: [
       { label: 'React', color: ColorTags.SKY },
       { label: 'Node', color: ColorTags.EMERALD },
@@ -154,22 +155,22 @@ const projects = [
 ];
 
 const ProjectList = () => (
-  <Section
-    title={
-      <h1 id='projects' className="text-3xl sm:text-4xl pt-14 text-center p-8 font-extrabold tracking-wide">
-        <span className="text-3xl font-extrabold ">
-          Projects 🚀
-        </span>
-      </h1>
-    }
+  <section
+  className='mx-0 max-screen-xl pt-32'
+    
   >
+  <h1 id='projects' className="text-3xl sm:text-4xl pt-14 text-center p-8 font-extrabold tracking-wide font-serif">
+  <span className="text-3xl font-extrabold font-serif">
+    Projects 🚀
+  </span>
+</h1>
     <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 gap-8 px-4 sm:px-6">
       {projects.map((project, index) => (
         <div
           key={index}
-          className="bg-gray-900 bg-opacity-70 border border-white backdrop-blur-md rounded-xl p-6 shadow-xl hover:scale-105 transition-transform duration-300"
+          className="bg-gray-900 bg-opacity-70 border border-white rounded-xl p-6 shadow-xl hover:scale-105 transition-transform duration-300"
         >
-          <h2 className="text-2xl sm:text-xl font-semibold text-center mb-3">
+          <h2 className=" sm:text-xl font-semibold text-center mb-3">
             
               {project.name}
             
@@ -185,7 +186,7 @@ const ProjectList = () => (
           </div>
 
           {/* Descripción */}
-          <p className="text-gray-300 mt-4 text-sm sm:text-base">{project.description}</p>
+          <p className="text-gray-300 mt-4">{project.description}</p>
 
           {/* Botones Demo y Repo */}
           <div className="mt-4 text-center space-x-2">
@@ -218,7 +219,7 @@ const ProjectList = () => (
       ))}
     </div>
 
-  </Section>
+  </section>
 );
 
 export { ProjectList };

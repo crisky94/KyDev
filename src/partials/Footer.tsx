@@ -1,6 +1,6 @@
 const Footer = () => (
     <footer className="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-6 mb-12 h-24 sm:h-28 p-4 sm:p-6 text-white shadow-md border-t-2 border-gray-500 border-opacity-50">
-        <p className="text-sm sm:text-base font-light text-center">
+        <p className="font-light text-center">
             © 2025. All rights reserved.
         </p>
 
