@@ -74,7 +74,7 @@ const CTA = () => {
     <div id='contact' className="flex flex-col items-center w-full h-auto mb-8 sm:pt-10 p-6 md:p-12 gap-6 pt-20">
       {/* Texto introductorio */}
       <div className="text-center">
-        <h2 className="text-3xl sm:text-4xl font-extrabold bg-gradient-to-r from-cyan-500 to-blue-500 text-transparent bg-clip-text">
+        <h2 className=" font-extrabold bg-gradient-to-r from-cyan-500 to-blue-500 text-transparent bg-clip-text">
           Let's Build Something Amazing! 
         </h2>
         <p className="text-lg text-gray-300 mt-3">
@@ -84,7 +84,7 @@ const CTA = () => {
 
       {/* Formulario */}
       <div className="bg-gray-900 bg-opacity-80 backdrop-blur-lg border border-gray-700 shadow-2xl w-full max-w-lg rounded-xl mx-auto p-6 sm:p-8">
-        <h1 className="text-2xl sm:text-3xl text-center font-bold uppercase tracking-wide mb-6">
+        <h1 className=" text-center font-bold uppercase tracking-wide mb-6">
           <span className="bg-gradient-to-r from-purple-500 to-pink-500 text-transparent bg-clip-text">
             Get In
           </span>

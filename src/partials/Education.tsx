@@ -7,7 +7,7 @@ const Education = () => (
     <section className='pt-32 pb-32'
 
     >
-        <h1 id='education' className="text-3xl sm:text-4xl pt-14 text-center p-8 font-extrabold tracking-wide">
+        <h1 id='education' className="text-3xl sm:text-2xl pt-14 text-center p-8 font-extrabold tracking-wide">
             <span className="text-3xl font-extrabold font-serif">
                 Education 🎓
             </span>

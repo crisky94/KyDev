@@ -1,9 +1,9 @@
 
 
 const Hero = () => (
-  <section className='mx-0 max-screen-xl pt-32'>
+  <section className=' w-full pt-32'>
         <div className='flex justify-center text-6xl sm:text-5xl md:text-6xl text-center mt-20'>
-          <p className="bg-gradient-to-r from-teal-500 to-cyan-600 text-transparent bg-clip-text text-center font-serif">Cris Labrador</p>
+          <p className="bg-gradient-to-r from-teal-500 to-cyan-600 text-transparent bg-clip-text text-center font-sans">Cris Labrador</p>
         </div>  
         <div className='flex justify-center text-6xl sm:text-5xl md:text-6xl text-center mt-4'>
           <p className=" text-center">My friends call me <span className='bg-gradient-to-r from-teal-500 to-cyan-600 text-transparent bg-clip-text text-center'> Ky</span></p>
@@ -23,8 +23,8 @@ const Hero = () => (
                 <img
                     src={"/assets/images/linkedin.png"}
                     alt="LinkedIn"
-                    width={24}
-                    height={24}
+                    width={32}
+                    height={32}
                     className="hover:scale-110 transition-all duration-300"
                 />
             </a>
@@ -37,8 +37,8 @@ const Hero = () => (
                 <img
                     src={"/assets/images/github.png"}
                     alt="GitHub"
-                    width={24}
-                    height={24}
+                    width={32}
+                    height={32}
                     className="hover:scale-110 transition-all duration-300"
                 />
             </a>
@@ -51,8 +51,8 @@ const Hero = () => (
                 <img
                     src={"/assets/images/gitlab-1.png"}
                     alt="GitLab"
-                    width={24}
-                    height={24}
+                    width={32}
+                    height={32}
                     className="hover:scale-110 transition-all duration-300"
                 />
             </a>

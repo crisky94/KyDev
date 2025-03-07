@@ -6,8 +6,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Inter', 'sans-serif'],
-        'jersey-15': ['"Jersey 15"', 'serif'], 
+        sans: ['"SF Pro Text"', '"SF Pro Icons"', '"Helvetica Neue"', 'Helvetica', 'Arial', 'sans-serif'],
+        'jersey': ['"Jersey 20"', 'serif'], 
       },
     },
   },
