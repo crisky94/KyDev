@@ -177,7 +177,7 @@ const ProjectList = () => (
           </h2>
 
           {/* Etiquetas */}
-          <div className="flex flex-wrap gap-12 justify-center">
+          <div className="flex flex-wrap gap-4 justify-center">
             {project.tags.map((tag, i) => (
               <Tags key={i} color={tag.color}>
                 {tag.label}

@@ -1,7 +1,7 @@
 import { ColorTags, Tags } from 'astro-boilerplate-components';
 
 const Stack = () => (
-    <div className="w-full text-xl pt-32">
+    <div id='stack' className="w-full text-xl pt-32">
         <h2 className="text-center text-3xl sm:text-4xl font-bold text-white mb-10 pt-10">
             <span className='text-3xl font-extrabold font-serif'>
                 My Stack 💻 
@@ -14,8 +14,10 @@ const Stack = () => (
                 { label: 'JavaScript', color: ColorTags.YELLOW, img: '../../public/assets/images/javascript.svg' },
                 { label: 'TypeScript', color: ColorTags.BLUE, img: '../../public/assets/images/typescript.svg' },
                 { label: 'Python', color: ColorTags.YELLOW, img: '../../public/assets/images/python.svg' },
+                { label: 'PHP', color: ColorTags.SLATE, img: '../../public/assets/images/php.svg' },
                 { label: 'Next.js', color: ColorTags.SLATE, img: '../../public/assets/images/nextjs_icon_dark.svg' },
                 { label: 'React', color: ColorTags.BLUE, img: '../../public/assets/images/React_dark.svg' },
+                { label: 'Laravel', color: ColorTags.RED, img: '../../public/assets/images/laravel.svg' },
                 { label: 'Node.js', color: ColorTags.EMERALD, img: '../../public/assets/images/nodejs.svg' },
                 { label: 'Socket.io', color: ColorTags.GRAY, img: '../../public/assets/images/Socket.io_dark.svg' },
                 { label: 'TailwindCSS', color: ColorTags.TEAL, img: '../../public/assets/images/tailwindcss.svg' },
