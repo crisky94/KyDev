@@ -2,13 +2,14 @@
 
 ---
 import type { FrontmatterPage, IFrontmatter } from 'astro-boilerplate-components';
-import { Section, PaginationHeader } from 'astro-boilerplate-components';
+import type { MarkdownInstance } from 'astro';
+import { Section, PaginationHeader, BlogGallery, NewerOlderPagination } from 'astro-boilerplate-components';
 import { AppConfig } from '@/utils/AppConfig';
 import { sortByDate } from '@/utils/Projects';  // Asegúrate de que esta función esté correctamente definida
 
 // Define las rutas estáticas para la página de proyectos
-export async function getStaticPaths({ paginate }) {
-  const allProjects = await Astro.glob('../projects/*.md');  // Asegúrate de que la ruta sea correcta
+export async function getStaticPaths({ paginate }: { paginate: (items: any[], options: { pageSize: number }) => any }) {
+  const allProjects = await Astro.glob('../projects/*.md') as unknown as MarkdownInstance<IFrontmatter>[];  // Asegúrate de que la ruta sea correcta
 
   if (allProjects.length === 0) {
     console.warn("⚠️ No se encontraron archivos .md en content/projects/");
@@ -31,7 +32,12 @@ const title = titleBase + titleSuffix;
 const description = 'Pagination example built with Astro styled with Tailwind CSS.';
 ---
 
-<Base head={{ title, description }}>
+<html>
+  <head>
+    <title>{title}</title>
+    <meta name="description" content={description} />
+  </head>
+  <body>
   <Section>
     <PaginationHeader
       title='PROJECTS'
@@ -42,7 +48,8 @@ const description = 'Pagination example built with Astro styled with Tailwind CS
   <Section>
     <BlogGallery postList={page.data} />
   </Section>
-
+  </body>
+</html>
   <Section>
     <NewerOlderPagination page={page} />
   </Section>
