@@ -1,4 +1,3 @@
-import '../styles/terminal.css';
 
 const Hero = () => (
   <section className="w-full pt-32 px-4">
@@ -15,7 +14,7 @@ const Hero = () => (
 
     <div className="flex justify-center text-3xl sm:text-4xl md:text-5xl text-center mt-6">
       <p>
-        My friends call me{' '}
+      My friends refer to me as{' '}
         <span className="bg-gradient-to-r from-teal-500 to-cyan-600 text-transparent bg-clip-text">
           Ky
         </span>
@@ -23,10 +22,10 @@ const Hero = () => (
     </div>
 
     <div className="text-center mt-6 sm:mt-12 p-8 max-w-3xl mx-auto text-base sm:text-lg text-gray-200">
-      Passionate <span className="text-teal-500">FullStack</span> and lover of{' '}
-      <span className="text-teal-500">logic and problem-solving</span>. Programming turned my
-      curiosity into a career, blending creativity with technical expertise. Explore my journey as
-      I turn ideas into reality!
+      I'm <span className="text-teal-500">FullStack</span>.I love solving problems and finding logical
+solutions. Programming turned my curiosity into a
+career, where I can combine creativity with
+technical skills to build and improve things.
       <div className="flex justify-center mt-6 gap-6">
         {[
           {

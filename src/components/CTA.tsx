@@ -77,7 +77,7 @@ const CTA = () => {
         <h2 className=" font-extrabold bg-gradient-to-r from-cyan-500 to-blue-500 text-transparent bg-clip-text">
           Let's Build Something Amazing! 
         </h2>
-        <p className="text-lg text-gray-300 mt-3">
+        <p className=" text-gray-300 mt-3">
           Looking for creative solutions? Let's connect and turn ideas into reality!
         </p>
       </div>
