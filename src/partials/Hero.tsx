@@ -3,7 +3,7 @@ const Hero = () => (
   <section className="w-full pt-32 px-4">
     <div className="flex flex-col md:flex-row justify-center items-center gap-6 mt-10">
       <img
-        className="rounded-full w-[120px] h-[120px] object-cover border-4 border-teal-400 shadow-md"
+        className="rounded-full w-[150px] h-[150px] object-fit border-4 border-teal-400 shadow-md"
         src="/assets/images/avatar.jpeg"
         alt="Avatar"
       />
