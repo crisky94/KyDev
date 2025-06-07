@@ -1,0 +1,334 @@
+	.section-header {
+		display: flex;
+		align-items: center;
+		gap: 1rem;
+		margin-bottom: 4rem;
+		text-align: center;
+		justify-content: center;
+	}
+
+	.section-number {
+		font-family: 'JetBrains Mono', monospace;
+		font-size: 1.5rem;
+		color: #00ff88;
+		font-weight: 600;
+	}
+
+	.section-title {
+		font-size: 3rem;
+		font-weight: 700;
+		color: #ffffff;
+		margin: 0;
+	}
+
+	.contact-content {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 6rem;
+		max-width: 1200px;
+		margin: 0 auto;
+	}
+
+	.contact-intro {
+		margin-bottom: 3rem;
+	}
+
+	.contact-intro h3 {
+		font-size: 2rem;
+		font-weight: 600;
+		margin-bottom: 1rem;
+	}
+
+	.contact-intro p {
+		color: #cccccc;
+		line-height: 1.7;
+		font-size: 1.1rem;
+	}
+
+	.contact-methods {
+		display: flex;
+		flex-direction: column;
+		gap: 1.5rem;
+		margin-bottom: 3rem;
+	}
+
+	.contact-item {
+		display: flex;
+		align-items: center;
+		gap: 1.5rem;
+		padding: 1.5rem;
+		background: rgba(255, 255, 255, 0.02);
+		border: 1px solid rgba(255, 255, 255, 0.1);
+		border-radius: 12px;
+		backdrop-filter: blur(20px);
+		transition: all 0.3s ease;
+	}
+
+	.contact-item:hover {
+		transform: translateY(-3px);
+		border-color: rgba(0, 255, 136, 0.3);
+		box-shadow: 0 10px 30px rgba(0, 255, 136, 0.1);
+	}
+
+	.contact-icon {
+		width: 60px;
+		height: 60px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background: linear-gradient(135deg, #00ff88, #00d4ff);
+		border-radius: 12px;
+		color: #000000;
+		flex-shrink: 0;
+	}
+
+	.contact-details h4 {
+		color: #ffffff;
+		font-weight: 600;
+		margin-bottom: 0.5rem;
+		font-size: 1.1rem;
+	}
+
+	.contact-link {
+		color: #00ff88;
+		text-decoration: none;
+		transition: color 0.3s ease;
+		font-family: 'JetBrains Mono', monospace;
+	}
+
+	.contact-link:hover {
+		color: #00d4ff;
+	}
+
+	.contact-text {
+		color: #cccccc;
+	}
+
+	.social-section h4 {
+		color: #ffffff;
+		font-weight: 600;
+		margin-bottom: 1rem;
+		font-size: 1.1rem;
+	}
+
+	.social-links {
+		display: flex;
+		gap: 1rem;
+	}
+
+	.social-link {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 50px;
+		height: 50px;
+		background: rgba(0, 255, 136, 0.1);
+		border: 1px solid rgba(0, 255, 136, 0.3);
+		border-radius: 12px;
+		color: #00ff88;
+		text-decoration: none;
+		transition: all 0.3s ease;
+	}
+
+	.social-link:hover {
+		background: #00ff88;
+		color: #000000;
+		transform: translateY(-3px);
+		box-shadow: 0 10px 20px rgba(0, 255, 136, 0.3);
+	}
+
+	.contact-form {
+		background: rgba(255, 255, 255, 0.02);
+		border: 1px solid rgba(255, 255, 255, 0.1);
+		border-radius: 12px;
+		padding: 3rem;
+		backdrop-filter: blur(20px);
+	}
+
+	.form-header {
+		margin-bottom: 2.5rem;
+		text-align: center;
+	}
+
+	.form-header h3 {
+		color: #ffffff;
+		font-size: 1.8rem;
+		font-weight: 600;
+		margin-bottom: 0.5rem;
+	}
+
+	.form-header p {
+		color: #cccccc;
+		font-size: 1rem;
+	}
+
+	.form-row {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 1.5rem;
+	}
+
+	.form-group {
+		margin-bottom: 2rem;
+		position: relative;
+	}
+
+	.form-group label {
+		display: block;
+		color: #ffffff;
+		font-weight: 500;
+		margin-bottom: 0.75rem;
+		font-family: 'JetBrains Mono', monospace;
+		font-size: 0.9rem;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+	}
+
+	.form-group input,
+	.form-group textarea {
+		width: 100%;
+		padding: 1rem 0;
+		background: transparent;
+		border: none;
+		border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+		color: #ffffff;
+		font-size: 1rem;
+		transition: all 0.3s ease;
+		font-family: inherit;
+	}
+
+	.form-group input:focus,
+	.form-group textarea:focus {
+		outline: none;
+		border-bottom-color: #00ff88;
+	}
+
+	.form-group input:focus + .form-line,
+	.form-group textarea:focus + .form-line {
+		transform: scaleX(1);
+	}
+
+	.form-line {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 2px;
+		background: linear-gradient(90deg, #00ff88, #00d4ff);
+		transform: scaleX(0);
+		transition: transform 0.3s ease;
+		transform-origin: left;
+	}
+
+	.form-group textarea {
+		resize: vertical;
+		min-height: 120px;
+	}
+
+	.contact-form .btn {
+		width: 100%;
+		justify-content: center;
+		font-size: 1.1rem;
+		padding: 1.25rem 2rem;
+		position: relative;
+		overflow: hidden;
+	}
+
+	.btn-text {
+		transition: transform 0.3s ease;
+	}
+
+	.btn-icon {
+		transition: transform 0.3s ease;
+	}
+
+	.contact-form .btn:hover .btn-text {
+		transform: translateX(-10px);
+	}
+
+	.contact-form .btn:hover .btn-icon {
+		transform: translateX(10px);
+	}
+
+      .Toastify__toast-container {
+        top: 20px;
+        right: 20px;
+        z-index: 10000; /* Asegúrate de que esté por encima de otros elementos */
+        animation: slideIn 0.3s ease-out forwards; /* Aplicamos la animación */
+    }
+
+    .custom-toast-success {
+        background: linear-gradient(135deg, #00ff88, #00d4ff) !important; /* Fondo degradado */
+        color: #000 !important; /* Color de texto oscuro */
+        padding: 1rem 2rem !important;
+        border-radius: 8px !important;
+        font-weight: 600 !important;
+        box-shadow: none !important; /* Quita la sombra por defecto de Toastify */
+        border: none !important; /* Quita el borde por defecto */
+        min-height: auto !important; /* Ajusta la altura mínima si es necesario */
+    }
+
+    .custom-toast-error {
+        background: linear-gradient(135deg, #ff4d4d, #ff8c8c) !important; /* Un degradado para el error */
+        color: #000 !important;
+        padding: 1rem 2rem !important;
+        border-radius: 8px !important;
+        font-weight: 600 !important;
+        box-shadow: none !important;
+        border: none !important;
+        min-height: auto !important;
+    }
+
+    .custom-toast-body {
+        margin: 0 !important; /* Elimina el margen interno por defecto del cuerpo */
+        padding: 0 !important; /* Elimina el padding interno por defecto del cuerpo */
+        font-size: 1rem; /* Ajusta el tamaño de fuente si es necesario */
+        line-height: normal;
+    }
+
+    /* Ocultar el botón de cerrar por defecto si no lo quieres */
+    .Toastify__close-button {
+        color: #000 !important; /* Asegura que la 'x' sea visible */
+        opacity: 1 !important;
+    }
+
+    /* Animación slideIn (copiada del esqueleto de Astro) */
+    @keyframes slideIn {
+        from {
+            transform: translateX(100%);
+            opacity: 0;
+        }
+        to {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+
+	@media (max-width: 768px) {
+		.section-title {
+			font-size: 2.5rem;
+		}
+
+		.contact-content {
+			grid-template-columns: 1fr;
+			gap: 3rem;
+		}
+
+		.form-row {
+			grid-template-columns: 1fr;
+		}
+
+		.contact-form {
+			padding: 2rem;
+		}
+
+		.contact-item {
+			flex-direction: column;
+			text-align: center;
+			gap: 1rem;
+		}
+
+		.social-links {
+			justify-content: center;
+		}
+	}

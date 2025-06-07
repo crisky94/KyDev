@@ -4,21 +4,21 @@ import tailwind from '@astrojs/tailwind';
 import sitemap from '@astrojs/sitemap';
 import robotsTxt from 'astro-robots-txt';
 
-// https://astro.build/config
+
 export default defineConfig({
-  site: 'https://kydev.com/', // Use to generate your sitemap and canonical URLs in your final build.
-  trailingSlash: 'always', // Use to always append '/' at end of url
+  site: 'https://kydev.com/',
+  trailingSlash: 'always', 
   markdown: {
     shikiConfig: {
-      theme: 'monokai', // Config for syntax highlighting themes
+      theme: 'monokai',
     },
   },
   integrations: [react(), tailwind({}), sitemap(), robotsTxt()],
   buildOptions: {
-    output: 'static',  // Esto asegura que el build será completamente estático
+    output: 'static',
   },
   build: {
-    minify: false, // Desactiva la minificación del código
+    minify: false,
     compress: false,
   },
 });

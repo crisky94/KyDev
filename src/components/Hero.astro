@@ -1,0 +1,424 @@
+---
+---
+
+<section id="hero" class="hero">
+	<div class="hero-bg">
+		<div class="matrix-rain"></div>
+		<div class="geometric-shapes">
+			<div class="shape shape-1 floating"></div>
+			<div class="shape shape-2 floating"></div>
+			<div class="shape shape-3 floating"></div>
+			<div class="shape shape-4 floating"></div>
+		</div>
+	</div>
+	
+	<div class="container">
+		<div class="hero-content">
+			<div class="hero-text">
+				<div class="hero-greeting text-reveal">
+					<span class="greeting-text">Hello World! I'm</span>
+				</div>
+				<h1 class="hero-title">
+					<span class="title-line text-reveal">
+						<span class="holographic">Ky</span>
+					</span>
+					<span class="title-line text-reveal">
+						<span class="neon glitch" data-text="Developer">Developer</span>
+					</span>
+				</h1>
+				<div class="hero-subtitle text-reveal">
+					<p class="typewriter">
+						Full Stack Developer specializing in creating extraordinary digital experiences with cutting-edge technologies
+					</p>
+				</div>
+				<div class="hero-buttons text-reveal">
+					<a href="#projects" class="btn btn-primary magnetic">
+						<span>View Projects</span>
+						<svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+							<path d="M13.025 1l-2.847 2.828 6.176 6.176h-16.354v3.992h16.354l-6.176 6.176 2.847 2.828 10.975-11z"/>
+						</svg>
+					</a>
+					<a href="#contact" class="btn btn-secondary magnetic">
+						<span>Get In Touch</span>
+					</a>
+				</div>
+			</div>
+			
+			<div class="hero-visual">
+				<div class="code-window">
+					<div class="window-header">
+						<div class="window-controls">
+							<span class="control close"></span>
+							<span class="control minimize"></span>
+							<span class="control maximize"></span>
+						</div>
+						<div class="window-title">portfolio.js</div>
+					</div>
+					<div class="code-content">
+						<div class="code-line">
+							<span class="line-number">1</span>
+							<span class="code-text">
+								<span class="keyword">const</span> 
+								<span class="variable">developer</span> = {
+							</span>
+						</div>
+						<div class="code-line">
+							<span class="line-number">2</span>
+							<span class="code-text">
+								&nbsp;&nbsp;<span class="property">name</span>: 
+								<span class="string">'Ky Developer'</span>,
+							</span>
+						</div>
+						<div class="code-line">
+							<span class="line-number">3</span>
+							<span class="code-text">
+								&nbsp;&nbsp;<span class="property">skills</span>: [
+								<span class="string">'React'</span>, 
+								<span class="string">'Node.js'</span>],
+							</span>
+						</div>
+						<div class="code-line">
+							<span class="line-number">4</span>
+							<span class="code-text">
+								&nbsp;&nbsp;<span class="property">passion</span>: 
+								<span class="string">'Creating Amazing UX'</span>
+							</span>
+						</div>
+						<div class="code-line">
+							<span class="line-number">5</span>
+							<span class="code-text">};</span>
+						</div>
+						<div class="code-line">
+							<span class="line-number">6</span>
+							<span class="code-text"></span>
+						</div>
+						<div class="code-line">
+							<span class="line-number">7</span>
+							<span class="code-text">
+								<span class="variable">developer</span>.<span class="method">code</span>();
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="scroll-indicator">
+			<div class="scroll-text">Scroll to explore</div>
+			<div class="scroll-arrow">
+				<svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+					<path d="M7.41 8.84L12 13.42l4.59-4.58L18 10.25l-6 6-6-6 1.41-1.41z"/>
+				</svg>
+			</div>
+		</div>
+	</div>
+</section>
+
+<style>
+	.hero {
+		min-height: 100vh;
+		display: flex;
+		align-items: center;
+		position: relative;
+		overflow: hidden;
+		padding-top: 100px;
+	}
+
+	.hero-bg {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		z-index: -1;
+	}
+
+	.matrix-rain {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: 
+			linear-gradient(90deg, transparent 98%, rgba(0, 255, 136, 0.03) 100%),
+			linear-gradient(180deg, transparent 98%, rgba(0, 255, 136, 0.03) 100%);
+		background-size: 50px 50px;
+		animation: matrix-scroll 20s linear infinite;
+	}
+
+	@keyframes matrix-scroll {
+		0% { transform: translateY(0); }
+		100% { transform: translateY(50px); }
+	}
+
+	.geometric-shapes {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+	}
+
+	.shape {
+		position: absolute;
+		border: 1px solid rgba(0, 255, 136, 0.1);
+		background: rgba(0, 255, 136, 0.02);
+	}
+
+	.shape-1 {
+		width: 200px;
+		height: 200px;
+		top: 10%;
+		left: 10%;
+		transform: rotate(45deg);
+		animation-duration: 8s;
+	}
+
+	.shape-2 {
+		width: 150px;
+		height: 150px;
+		top: 60%;
+		right: 15%;
+		border-radius: 50%;
+		animation-duration: 6s;
+	}
+
+	.shape-3 {
+		width: 100px;
+		height: 100px;
+		bottom: 20%;
+		left: 60%;
+		clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+		animation-duration: 10s;
+	}
+
+	.shape-4 {
+		width: 80px;
+		height: 80px;
+		top: 30%;
+		right: 40%;
+		transform: rotate(30deg);
+		animation-duration: 7s;
+	}
+
+	.hero-content {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 6rem;
+		align-items: center;
+		max-width: 1400px;
+		margin: 0 auto;
+	}
+
+	.hero-text {
+		z-index: 2;
+	}
+
+	.hero-greeting {
+		margin-bottom: 1rem;
+	}
+
+	.greeting-text {
+		font-family: 'JetBrains Mono', monospace;
+		color: #00ff88;
+		font-size: 1.2rem;
+		font-weight: 400;
+	}
+
+	.hero-title {
+		font-size: 4.5rem;
+		font-weight: 700;
+		line-height: 1.1;
+		margin-bottom: 2rem;
+		color: #ffffff;
+	}
+
+	.title-line {
+		display: block;
+		margin-bottom: 0.5rem;
+	}
+
+	.hero-subtitle {
+		margin-bottom: 3rem;
+	}
+
+	.typewriter {
+		font-size: 1.3rem;
+		color: #cccccc;
+		line-height: 1.6;
+		max-width: 500px;
+	}
+
+	.hero-buttons {
+		display: flex;
+		gap: 1.5rem;
+		flex-wrap: wrap;
+	}
+
+	.hero-visual {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		z-index: 2;
+	}
+
+	.code-window {
+		width: 100%;
+		max-width: 500px;
+		background: rgba(15, 15, 15, 0.9);
+		border: 1px solid rgba(0, 255, 136, 0.2);
+		border-radius: 8px;
+		overflow: hidden;
+		backdrop-filter: blur(20px);
+		box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+	}
+
+	.window-header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 1rem 1.5rem;
+		background: rgba(0, 0, 0, 0.5);
+		border-bottom: 1px solid rgba(0, 255, 136, 0.1);
+	}
+
+	.window-controls {
+		display: flex;
+		gap: 0.5rem;
+	}
+
+	.control {
+		width: 12px;
+		height: 12px;
+		border-radius: 50%;
+	}
+
+	.control.close { background: #ff5f57; }
+	.control.minimize { background: #ffbd2e; }
+	.control.maximize { background: #28ca42; }
+
+	.window-title {
+		font-family: 'JetBrains Mono', monospace;
+		color: #cccccc;
+		font-size: 0.9rem;
+	}
+
+	.code-content {
+		padding: 1.5rem;
+		font-family: 'JetBrains Mono', monospace;
+		font-size: 0.9rem;
+		line-height: 1.6;
+	}
+
+	.code-line {
+		display: flex;
+		margin-bottom: 0.5rem;
+		animation: type-line 0.5s ease-out;
+		animation-fill-mode: both;
+	}
+
+	.code-line:nth-child(1) { animation-delay: 0.5s; }
+	.code-line:nth-child(2) { animation-delay: 1s; }
+	.code-line:nth-child(3) { animation-delay: 1.5s; }
+	.code-line:nth-child(4) { animation-delay: 2s; }
+	.code-line:nth-child(5) { animation-delay: 2.5s; }
+	.code-line:nth-child(6) { animation-delay: 3s; }
+	.code-line:nth-child(7) { animation-delay: 3.5s; }
+
+	@keyframes type-line {
+		from {
+			opacity: 0;
+			transform: translateX(-20px);
+		}
+		to {
+			opacity: 1;
+			transform: translateX(0);
+		}
+	}
+
+	.line-number {
+		color: #666666;
+		margin-right: 1rem;
+		min-width: 20px;
+		text-align: right;
+	}
+
+	.code-text {
+		color: #ffffff;
+	}
+
+	.keyword { color: #ff79c6; }
+	.variable { color: #8be9fd; }
+	.property { color: #50fa7b; }
+	.string { color: #f1fa8c; }
+	.method { color: #bd93f9; }
+
+	.scroll-indicator {
+		position: absolute;
+		bottom: 3rem;
+		left: 50%;
+		transform: translateX(-50%);
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 1rem;
+		color: #cccccc;
+		animation: bounce 2s infinite;
+	}
+
+	.scroll-text {
+		font-family: 'JetBrains Mono', monospace;
+		font-size: 0.9rem;
+		writing-mode: vertical-rl;
+		text-orientation: mixed;
+	}
+
+	.scroll-arrow svg {
+		display: block;
+		animation: arrow-bounce 2s infinite;
+	}
+
+	@keyframes arrow-bounce {
+		0%, 20%, 50%, 80%, 100% {
+			transform: translateY(0);
+		}
+		40% {
+			transform: translateY(10px);
+		}
+		60% {
+			transform: translateY(5px);
+		}
+	}
+
+	@media (max-width: 768px) {
+		.hero {
+			padding-top: 120px;
+		}
+
+		.hero-content {
+			grid-template-columns: 1fr;
+			gap: 3rem;
+			text-align: center;
+		}
+
+		.hero-title {
+			font-size: 3rem;
+		}
+
+		.typewriter {
+			font-size: 1.1rem;
+		}
+
+		.code-window {
+			max-width: 100%;
+		}
+
+		.hero-buttons {
+			justify-content: center;
+		}
+
+		.shape {
+			opacity: 0.3;
+		}
+	}
+</style>
