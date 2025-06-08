@@ -7,24 +7,25 @@ import "../styles/contactForm.css"
 // Importa el CSS si lo manejas por separado para el componente React
 // import '../styles/ContactForm.css'; // Si tienes estilos específicos para el formulario aquí
 
-interface FormData {
-  name: string;
-  email: string;
-  subject: string; // Asegúrate de que el campo subject esté aquí
-  message: string;
-}
+/**
+ * @typedef {Object} FormData
+ * @property {string} name
+ * @property {string} email
+ * @property {string} subject
+ * @property {string} message
+ */
 
-const ContactForm: React.FC = () => {
-  const [formData, setFormData] = useState<FormData>({
+const ContactForm = () => {
+  const [formData, setFormData] = useState({
     name: '',
     email: '',
     subject: '', // Inicializar subject
     message: '',
   });
-  const [isSubmitting, setIsSubmitting] = useState<boolean>(false);
-  const [error, setError] = useState<string>('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [error, setError] = useState('');
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({
       ...formData,
@@ -38,7 +39,7 @@ const ContactForm: React.FC = () => {
     }
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
     setError('');

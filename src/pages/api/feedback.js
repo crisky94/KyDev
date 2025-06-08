@@ -1,15 +1,14 @@
-import { APIRoute } from 'astro';
 import emailjs from 'emailjs-com';
 
-export const post: APIRoute = async ({ request }) => {
+export const post = async ({ request }) => {
     const formData = await request.formData();
-    const name = formData.get('name') as string;
-    const email = formData.get('email') as string;
-    const message = formData.get('message') as string;
+    const name = formData.get('name');
+    const email = formData.get('email');
+    const message = formData.get('message');
 
     try {
         // Enviar correo a través de EmailJS
-        const result = await emailjs.send(
+        await emailjs.send(
             import.meta.env.PUBLIC_EMAILJS_SERVICE_ID, // ID del servicio
             import.meta.env.PUBLIC_EMAILJS_TEMPLATE_ID, // ID de la plantilla
             {
