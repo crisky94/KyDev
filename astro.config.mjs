@@ -5,7 +5,7 @@ import { fileURLToPath } from 'url'; // <--- Add this import
 // https://astro.build/config
 export default defineConfig({
   output: 'static',
-  
+
   vite: {
     resolve: {
       alias: {
