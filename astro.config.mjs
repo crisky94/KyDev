@@ -5,6 +5,10 @@ import { fileURLToPath } from 'url'; // <--- Add this import
 // https://astro.build/config
 export default defineConfig({
   output: 'static',
+  
+  build: {
+    inlineStylesheets: 'never',
+  },
 
   vite: {
     resolve: {
@@ -19,6 +23,10 @@ export default defineConfig({
     },
     css: {
       devSourcemap: true,
+    },
+    build: {
+      cssCodeSplit: false,
+      minify: false,
     }
   },
   integrations: [react()],

@@ -2,7 +2,11 @@
 <html lang="es">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 		<link rel="icon" type="image/svg+xml" href="/logo-kydev.png" />
 		<meta name="generator" content={Astro.generator} />
 		<title>KyDev - Portfolio</title>
@@ -120,24 +124,28 @@
 		font-family: 'Space Grotesk', system-ui, -apple-system, sans-serif;
 		scroll-behavior: smooth;
 		cursor: none;
-		font-size: 100%;
-		-webkit-text-size-adjust: 100%;
-		-ms-text-size-adjust: 100%;
+		font-size: 16px !important;
+		-webkit-text-size-adjust: none !important;
+		-ms-text-size-adjust: none !important;
 		-webkit-font-smoothing: antialiased;
 		-moz-osx-font-smoothing: grayscale;
 		text-rendering: optimizeLegibility;
+		zoom: 1 !important;
+		transform: scale(1) !important;
 	}
 
 	body {
-		margin: 0;
-		width: 100%;
-		min-height: 100vh;
+		margin: 0 !important;
+		width: 100% !important;
+		min-height: 100vh !important;
 		background: #0a0a0a;
 		color: #ffffff;
 		line-height: 1.6;
 		overflow-x: hidden;
 		position: relative;
-		font-size: 1rem;
+		font-size: 16px !important;
+		zoom: 1 !important;
+		transform: scale(1) !important;
 	}
 
 	/* Custom Cursor */
@@ -287,13 +295,16 @@
 
 	/* Utility classes */
 	.container {
-		max-width: 1400px;
-		margin: 0 auto;
-		padding: 0 2rem;
+		max-width: 1400px !important;
+		width: 100% !important;
+		margin: 0 auto !important;
+		padding: 0 2rem !important;
+		box-sizing: border-box !important;
 	}
 
 	.section-padding {
-		padding: 8rem 0;
+		padding: 8rem 0 !important;
+		min-height: auto !important;
 	}
 
 	.btn {
