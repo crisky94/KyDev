@@ -103,32 +103,30 @@ const ContactForm = () => {
             <p>Let's discuss your next project</p>
         </div>
 
-        <div className="form-row">
-            <div className="form-group">
-                <label htmlFor="name">Name</label>
-                <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    required
-                />
-                <span className="form-line"></span>
-            </div>
+        <div className="form-group">
+            <label htmlFor="name">Name</label>
+            <input
+                type="text"
+                id="name"
+                name="name"
+                value={formData.name}
+                onChange={handleChange}
+                required
+            />
+            <span className="form-line"></span>
+        </div>
 
-            <div className="form-group">
-                <label htmlFor="email">Email</label>
-                <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    required
-                />
-                <span className="form-line"></span>
-            </div>
+        <div className="form-group">
+            <label htmlFor="email">Email</label>
+            <input
+                type="email"
+                id="email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+                required
+            />
+            <span className="form-line"></span>
         </div>
 
         <div className="form-group">
