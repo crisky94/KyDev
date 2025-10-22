@@ -13,26 +13,21 @@
 	</head>
 	<body>
 		<div class="cursor-dot" data-cursor-dot></div>
-		<div class="cursor-outline" data-cursor-outline></div>
 		<div class="grain"></div>
 		<slot />
 		<script>
 			// Custom cursor
 			document.addEventListener('DOMContentLoaded', function() {
 				const cursorDot = document.querySelector('[data-cursor-dot]');
-				const cursorOutline = document.querySelector('[data-cursor-outline]');
 
 				window.addEventListener('mousemove', function(e) {
 					const posX = e.clientX;
 					const posY = e.clientY;
 
-					cursorDot.style.left = `${posX}px`;
-					cursorDot.style.top = `${posY}px`;
-
-					cursorOutline.animate({
-						left: `${posX}px`,
-						top: `${posY}px`
-					}, { duration: 500, fill: "forwards" });
+					if (cursorDot) {
+						cursorDot.style.left = `${posX}px`;
+						cursorDot.style.top = `${posY}px`;
+					}
 				});
 
 				// Magnetic effect for buttons
@@ -150,18 +145,6 @@
 		mix-blend-mode: difference;
 	}
 
-	.cursor-outline {
-		width: 40px;
-		height: 40px;
-		border: 2px solid rgba(0, 255, 136, 0.3);
-		border-radius: 50%;
-		position: fixed;
-		top: -20px;
-		left: -20px;
-		pointer-events: none;
-		z-index: 9998;
-	}
-
 	/* Grain texture */
 	.grain {
 		position: fixed;
@@ -197,20 +180,13 @@
 		position: relative;
 	}
 
+	/* Destello removido - solo mantener la funcionalidad de reveal sin el efecto de destello */
 	.text-reveal::before {
-		content: '';
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		background: linear-gradient(90deg, transparent, #00ff88, transparent);
-		transform: translateX(-100%);
-		transition: transform 0.8s cubic-bezier(0.19, 1, 0.22, 1);
+		display: none;
 	}
 
 	.text-reveal.revealed::before {
-		transform: translateX(100%);
+		display: none;
 	}
 
 	/* Glitch effect */
@@ -452,8 +428,7 @@
 			cursor: auto;
 		}
 		
-		.cursor-dot,
-		.cursor-outline {
+		.cursor-dot {
 			display: none;
 		}
 
