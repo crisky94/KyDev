@@ -4,8 +4,8 @@ import { fileURLToPath } from 'url'; // <--- Add this import
 
 // https://astro.build/config
 export default defineConfig({
-  // ... otras configuraciones de Astro
-
+  output: 'static',
+  
   vite: {
     resolve: {
       alias: {
@@ -16,7 +16,11 @@ export default defineConfig({
     },
     optimizeDeps: {
       disabled: true,
+    },
+    css: {
+      devSourcemap: true,
     }
   },
   integrations: [react()],
+  compressHTML: false,
 });
