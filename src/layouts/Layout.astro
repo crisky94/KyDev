@@ -22,16 +22,30 @@
 			// Custom cursor
 			document.addEventListener('DOMContentLoaded', function() {
 				const cursorDot = document.querySelector('[data-cursor-dot]');
-
-				window.addEventListener('mousemove', function(e) {
-					const posX = e.clientX;
-					const posY = e.clientY;
-
-					if (cursorDot) {
-						cursorDot.style.left = `${posX}px`;
-						cursorDot.style.top = `${posY}px`;
-					}
-				});
+				
+				if (cursorDot) {
+					let mouseX = 0;
+					let mouseY = 0;
+					
+					window.addEventListener('mousemove', function(e) {
+						mouseX = e.clientX;
+						mouseY = e.clientY;
+						
+						requestAnimationFrame(() => {
+							cursorDot.style.transform = `translate(${mouseX - 4}px, ${mouseY - 4}px)`;
+						});
+					});
+					
+					// Show cursor when mouse enters window
+					document.addEventListener('mouseenter', () => {
+						cursorDot.style.opacity = '1';
+					});
+					
+					// Hide cursor when mouse leaves window
+					document.addEventListener('mouseleave', () => {
+						cursorDot.style.opacity = '0';
+					});
+				}
 
 				// Magnetic effect for buttons
 				const magneticElements = document.querySelectorAll('.magnetic');
@@ -123,7 +137,7 @@
 	html {
 		font-family: 'Space Grotesk', system-ui, -apple-system, sans-serif;
 		scroll-behavior: smooth;
-		cursor: none;
+		cursor: none !important;
 		font-size: 16px !important;
 		-webkit-text-size-adjust: none !important;
 		-ms-text-size-adjust: none !important;
@@ -132,6 +146,10 @@
 		text-rendering: optimizeLegibility;
 		zoom: 1 !important;
 		transform: scale(1) !important;
+	}
+	
+	*, *::before, *::after {
+		cursor: none !important;
 	}
 
 	body {
@@ -150,16 +168,19 @@
 
 	/* Custom Cursor */
 	.cursor-dot {
-		width: 8px;
-		height: 8px;
-		background: #00ff88;
-		border-radius: 50%;
-		position: fixed;
-		top: 0;
-		left: 0;
-		pointer-events: none;
-		z-index: 9999;
-		mix-blend-mode: difference;
+		width: 8px !important;
+		height: 8px !important;
+		background: #00ff88 !important;
+		border-radius: 50% !important;
+		position: fixed !important;
+		top: 0 !important;
+		left: 0 !important;
+		pointer-events: none !important;
+		z-index: 99999 !important;
+		mix-blend-mode: difference !important;
+		opacity: 0 !important;
+		transition: opacity 0.2s ease !important;
+		will-change: transform !important;
 	}
 
 
@@ -416,21 +437,22 @@
 			0 0 30px rgba(0, 255, 136, 0.1);
 	}
 
-	@media (max-width: 768px) {
-		html {
-			cursor: auto;
+	@media (max-width: 768px), (hover: none) {
+		html, *, *::before, *::after {
+			cursor: auto !important;
 		}
 		
 		.cursor-dot {
-			display: none;
+			display: none !important;
+			opacity: 0 !important;
 		}
 
 		.container {
-			padding: 0 1rem;
+			padding: 0 1rem !important;
 		}
 
 		.section-padding {
-			padding: 4rem 0;
+			padding: 4rem 0 !important;
 		}
 	}
 </style>
