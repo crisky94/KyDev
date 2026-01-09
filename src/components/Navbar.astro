@@ -5,7 +5,9 @@
 	<div class="container">
 		<div class="nav-content">
 			
-				<img src="/logo.jpeg" alt="" width="40px">
+			<a href="/" class="logo-link magnetic">
+				<img src="/logo-kydev.png" alt="KyDev Logo" class="nav-logo">
+			</a>
 		
 			
 			<div class="nav-links">
@@ -17,9 +19,9 @@
 					<span class="nav-number">02.</span>
 					<span class="nav-text">Projects</span>
 				</a>
-				<a href="#skills" class="nav-link magnetic">
+				<a href="#certificates" class="nav-link magnetic">
 					<span class="nav-number">03.</span>
-					<span class="nav-text">Skills</span>
+					<span class="nav-text">Certificates</span>
 				</a>
 				<a href="#contact" class="nav-link magnetic">
 					<span class="nav-number">04.</span>
@@ -44,9 +46,9 @@
 					<span class="mobile-nav-number">02.</span>
 					<span class="mobile-nav-text">Projects</span>
 				</a>
-				<a href="#skills" class="mobile-nav-link">
+				<a href="#certificates" class="mobile-nav-link">
 					<span class="mobile-nav-number">03.</span>
-					<span class="mobile-nav-text">Skills</span>
+					<span class="mobile-nav-text">Certificates</span>
 				</a>
 				<a href="#contact" class="mobile-nav-link">
 					<span class="mobile-nav-number">04.</span>
@@ -73,7 +75,7 @@
 
 	.navbar.scrolled {
 		background: rgba(10, 10, 10, 0.95);
-		border-bottom-color: rgba(0, 255, 136, 0.2);
+		border-bottom-color: rgba(0, 247, 255, 0.2);
 	}
 
 	.nav-content {
@@ -82,12 +84,24 @@
 		align-items: center;
 	}
 
-	.logo {
-		font-size: 1.8rem;
-		font-weight: 700;
+	.logo-link {
+		display: flex;
+		align-items: center;
 		text-decoration: none;
-		font-family: 'JetBrains Mono', monospace;
-		position: relative;
+	}
+
+	.nav-logo {
+		width: 45px;
+		height: auto;
+		object-fit: contain;
+		filter: drop-shadow(0 0 8px rgba(0, 247, 255, 0.3));
+		mix-blend-mode: screen; /* Effectively makes black backgrounds transparent */
+		transition: all 0.3s ease;
+	}
+
+	.logo-link:hover .nav-logo {
+		filter: drop-shadow(0 0 15px rgba(0, 247, 255, 0.6));
+		transform: scale(1.05);
 	}
 
 	.nav-links {
@@ -109,7 +123,7 @@
 	}
 
 	.nav-number {
-		color: #00ff88;
+		color: #00f7ff;
 		font-size: 0.9rem;
 	}
 
@@ -124,7 +138,7 @@
 		left: 0;
 		width: 0;
 		height: 2px;
-		background: linear-gradient(90deg, #00ff88, #00d4ff);
+		background: linear-gradient(90deg, #00f7ff, #00d4ff);
 		transition: width 0.3s ease;
 	}
 
@@ -133,7 +147,7 @@
 	}
 
 	.nav-link:hover {
-		color: #00ff88;
+		color: #00f7ff;
 		transform: translateY(-2px);
 	}
 
@@ -158,7 +172,7 @@
 
 	.mobile-menu-btn.active .hamburger-line:nth-child(1) {
 		transform: rotate(45deg) translate(8px, 8px);
-		background: #00ff88;
+		background: #00f7ff;
 	}
 
 	.mobile-menu-btn.active .hamburger-line:nth-child(2) {
@@ -167,7 +181,7 @@
 
 	.mobile-menu-btn.active .hamburger-line:nth-child(3) {
 		transform: rotate(-45deg) translate(8px, -8px);
-		background: #00ff88;
+		background: #00f7ff;
 	}
 
 	.mobile-menu {
@@ -209,7 +223,7 @@
 	}
 
 	.mobile-nav-number {
-		color: #00ff88;
+		color: #00f7ff;
 		font-size: 1rem;
 	}
 
@@ -218,7 +232,7 @@
 	}
 
 	.mobile-nav-link:hover {
-		color: #00ff88;
+		color: #00f7ff;
 		transform: scale(1.1);
 	}
 
